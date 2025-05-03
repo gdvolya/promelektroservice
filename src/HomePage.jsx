@@ -40,7 +40,7 @@ export default function HomePage() {
         <section>
           <h2 className="text-xl font-semibold mb-2">Обратная связь</h2>
           <form
-            action="https://formspree.io/f/your-form-id"
+            action="https://formspree.io/f/xeogalqn"
             method="POST"
             className="space-y-4"
           >
