@@ -1,49 +1,57 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Промэлектросервис</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Промелектросервіс</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Промэлектросервис</h1>
-    <nav>
-      <a href="#about">О нас</a>
-      <a href="#services">Услуги</a>
-      <a href="#contact">Контакты</a>
-    </nav>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Промелектросервіс</h1>
+      <p>Електромонтажні роботи під ключ</p>
+      <a href="#contact" class="btn">Зв'язатися з нами</a>
+    </div>
   </header>
 
-  <section id="hero">
-    <div class="overlay">
-      <h2>Электромонтажные работы любой сложности</h2>
+  <section id="about" class="about-section">
+    <h2>Про нас</h2>
+    <div class="about-text">
+      <p>Ми спеціалізуємось на професійних електромонтажних роботах для житлових та комерційних об'єктів. Наші майстри мають понад 10 років досвіду.</p>
+      <p>Гарантуємо якість, безпеку та дотримання строків. Обираючи нас, ви отримуєте надійного партнера для будь-яких електричних проєктів.</p>
     </div>
   </section>
 
-  <section id="about">
-    <h2>О нас</h2>
-    <p>
-      Компания «Промэлектросервис» специализируется на предоставлении качественных электромонтажных услуг. 
-      Мы работаем с объектами различного назначения — от жилых помещений до промышленных предприятий. 
-      Наши специалисты обладают многолетним опытом, используют современное оборудование и гарантируют высокое качество выполнения работ.
-    </p>
+  <section id="services" class="services-section">
+    <h2>Наші послуги</h2>
+    <div class="services-grid">
+      <div class="service-item">Проєктування електросистем</div>
+      <div class="service-item">Монтаж розеток і вимикачів</div>
+      <div class="service-item">Прокладка кабельних трас</div>
+      <div class="service-item">Установка електрощитів</div>
+      <div class="service-item">Зовнішнє та внутрішнє освітлення</div>
+      <div class="service-item">Системи відеоспостереження</div>
+      <div class="service-item">Заземлення та блискавкозахист</div>
+      <div class="service-item">Автоматизація (розумний дім)</div>
+      <div class="service-item">Обслуговування електромереж</div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Связаться с нами</h2>
-    <form action="mailto:gdvolya@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Имя (например, Денис)" required>
-      <input type="tel" name="phone" placeholder="Телефон (например, 0666229776)" required>
-      <textarea name="message" placeholder="Ваше сообщение..." required></textarea>
-      <button type="submit">Отправить</button>
+  <section id="contact" class="contact-section">
+    <h2>Зв'язок з нами</h2>
+    <form action="mailto:gdvolya@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+      <input type="text" name="name" placeholder="Ваше ім’я (наприклад, Денис)" required />
+      <input type="tel" name="phone" placeholder="Ваш телефон (наприклад, 0666229776)" required />
+      <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+      <button type="submit" class="btn">Відправити</button>
     </form>
   </section>
 
   <footer>
-    <p>Email: gdvolya@gmail.com</p>
-    <p>Телефон: +380666229776</p>
+    <p>Телефон: <a href="tel:+380666229776">+380666229776</a></p>
+    <p>Email: <a href="mailto:gdvolya@gmail.com">gdvolya@gmail.com</a></p>
+    <p>&copy; 2025 Промелектросервіс</p>
   </footer>
 </body>
 </html>
