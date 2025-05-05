@@ -1,54 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ПромЭлектроСервис</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Промэлектросервис</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .content {
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #ffcc00;
+      border: none;
+      border-radius: 5px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #ffd633;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    @media (max-width: 600px) {
+      .contact-form {
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="background-image"></div>
-    <header>
-        <h1>ПромЭлектроСервис</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="about">
-        <h2>О нас</h2>
-        <p>Мы предоставляем полный спектр электромонтажных работ любой сложности.</p>
+  <header>
+    <h1>Промэлектросервис</h1>
+    <p>Профессиональные электромонтажные работы</p>
+  </header>
+
+  <div class="content">
+    <section class="contact-form">
+      <form action="https://formspree.io/f/xeogalqn" method="POST">
+        <label>
+          Ваш email:
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Сообщение:
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Отправить</button>
+      </form>
     </section>
+  </div>
 
-    <section id="services">
-        <h2>Услуги</h2>
-        <ul>
-            <li>Проектирование электросетей</li>
-            <li>Монтаж внутренних и наружных сетей</li>
-            <li>Установка розеток, выключателей, светильников</li>
-            <li>Автоматизация систем электроснабжения</li>
-            <li>Диагностика и ремонт электропроводки</li>
-        </ul>
-    </section>
+  <footer>
+    <p>Телефон: +380666229776 | Email: gdvolya@gmail.com</p>
+  </footer>
 
-    <section id="contact">
-        <h2>Связаться с нами</h2>
-        <form action="https://formspree.io/f/xeogalqn" method="POST" class="contact-form">
-            <input type="text" name="name" placeholder="Ваше имя (например, Денис)" required>
-            <input type="email" name="email" placeholder="Ваш e-mail" required>
-            <input type="tel" name="phone" placeholder="Телефон (например, +380666229776)" required>
-            <textarea name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
-            <button type="submit">Отправить</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>Телефон: +380666229776 | Email: gdvolya@gmail.com</p>
-    </footer>
 </body>
 </html>
