@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Промэлектросервис</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Промэлектросервис</h1>
     <nav>
       <a href="#about">О нас</a>
+      <a href="#services">Услуги</a>
       <a href="#contact">Контакты</a>
     </nav>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>О нас</h2>
-      <div class="about-grid">
-        <p>Мы — команда профессионалов в области электромонтажных работ.</p>
-        <p>Работаем по всей Украине и предоставляем полный спектр услуг.</p>
-        <p>Гарантируем качество, безопасность и соблюдение сроков.</p>
-        <p>Имеем все необходимые сертификаты и допуски.</p>
-      </div>
-    </section>
+  <section id="hero">
+    <div class="overlay">
+      <h2>Электромонтажные работы любой сложности</h2>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Связаться с нами</h2>
-      <form action="https://formspree.io/f/your_id" method="POST">
-        <input type="text" name="name" placeholder="Денис" required />
-        <input type="tel" name="phone" placeholder="+380666229776" required />
-        <textarea name="message" placeholder="Ваше сообщение" required></textarea>
-        <button type="submit">Отправить</button>
-      </form>
+  <section id="about">
+    <h2>О нас</h2>
+    <p>
+      Компания «Промэлектросервис» специализируется на предоставлении качественных электромонтажных услуг. 
+      Мы работаем с объектами различного назначения — от жилых помещений до промышленных предприятий. 
+      Наши специалисты обладают многолетним опытом, используют современное оборудование и гарантируют высокое качество выполнения работ.
+    </p>
+  </section>
 
-      <div class="contact-info">
-        <p>Email: <a href="mailto:gdvolya@gmail.com">gdvolya@gmail.com</a></p>
-        <p>Телефон: <a href="tel:+380666229776">+380666229776</a></p>
-      </div>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Связаться с нами</h2>
+    <form action="mailto:gdvolya@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Имя (например, Денис)" required>
+      <input type="tel" name="phone" placeholder="Телефон (например, 0666229776)" required>
+      <textarea name="message" placeholder="Ваше сообщение..." required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Промэлектросервис</p>
+    <p>Email: gdvolya@gmail.com</p>
+    <p>Телефон: +380666229776</p>
   </footer>
 </body>
 </html>
