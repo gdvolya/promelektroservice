@@ -1,39 +1,47 @@
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Промэлектросервис</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Промелектросервіс</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-  <header>
-    <h1>Промэлектросервис</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="portfolio.html">Портфолио</a></li>
-        <li><a href="reviews.html">Отзывы</a></li>
-        <li><a href="pricing.html">Цены</a></li>
-        <li><a href="#contact">Контакты</a></li>
-      </ul>
-    </nav>
+<body style="background: url('images/background.jpg') no-repeat center center fixed; background-size: cover;">
+
+  <header class="navbar">
+    <div class="container">
+      <h1>Промелектросервіс</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="portfolio.html">Портфоліо</a></li>
+          <li><a href="reviews.html">Відгуки</a></li>
+          <li><a href="pricing.html">Ціни</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section id="about">
-      <h2>О компании</h2>
-      <p>Наша компания предоставляет профессиональные электромонтажные услуги по всей Украине. Мы работаем с 2010 года и гарантируем качество и надёжность.</p>
-      <p>Наши специалисты выполняют работы любой сложности — от замены розеток до проектирования и монтажа электросетей.</p>
-      <p>Мы ценим каждого клиента и предоставляем индивидуальный подход к каждой задаче.</p>
-    </section>
-    <section id="contact">
-      <h2>Связаться с нами</h2>
-      <form action="https://formspree.io/f/xeogalqn" method="POST">
-        <label>Ваш email: <input type="email" name="email"></label><br>
-        <label>Сообщение: <textarea name="message"></textarea></label><br>
-        <button type="submit">Отправить</button>
-      </form>
+
+  <main class="container">
+    <section class="services">
+      <h2>Наші послуги</h2>
+      <ul>
+        <li>Проєктування та монтаж електропроводки</li>
+        <li>Встановлення розеток і вимикачів</li>
+        <li>Монтаж освітлення будь-якої складності</li>
+        <li>Електрощити, автоматика, захист</li>
+        <li>Пошук та усунення несправностей</li>
+        <li>Сервісне обслуговування</li>
+      </ul>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Промелектросервіс | Всі права захищено</p>
+    </div>
+  </footer>
 </body>
 </html>
