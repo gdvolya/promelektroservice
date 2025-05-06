@@ -1,82 +1,45 @@
-body, html {
+body {
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  height: 100%;
+  font-family: Arial, sans-serif;
+  background: url('../img/background.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: white;
+}
+
+.logo {
+  width: 100px;
+  margin: 10px auto;
+  display: block;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  z-index: 1000;
+  text-align: center;
+  padding: 10px;
 }
 
-.logo img {
-  height: 50px;
-}
-
-nav ul {
+.nav-menu {
   list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-nav a {
+.nav-menu li a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #FFD700;
 }
 
 .hero {
-  background-image: url('../img/background.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  padding-top: 80px;
+  padding: 100px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 8px #000;
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
-
-.hero-text p {
-  font-size: 1.5rem;
-  text-shadow: 2px 2px 8px #000;
-}
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 2rem;
-}
-.portfolio-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-.portfolio-grid img:hover {
-  transform: scale(1.05);
-}
-
