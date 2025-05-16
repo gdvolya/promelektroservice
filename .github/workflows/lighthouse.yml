@@ -10,26 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout репозиторий
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Установка Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
-      - name: Установка Lighthouse CI
+      - name: Install Lighthouse CI
         run: npm install -g @lhci/cli
 
-      - name: Запуск Lighthouse
+      - name: Run Lighthouse CI
         run: |
-          lhci autorun \
-            --collect.url=https://promelektroservice.vercel.app \
-            --upload.target=filesystem \
-            --upload.outputDir=./lhci-report
+          lhci autorun --collect.url=https://promelektroservice.vercel.app \
+                       --upload.target=filesystem \
+                       --upload.outputDir=./lhci-report
 
-      - name: Сохранение отчёта
+      - name: Upload report
         uses: actions/upload-artifact@v3
         with:
           name: lighthouse-report
-          path: ./lhci-report
+          path: lhci-report
