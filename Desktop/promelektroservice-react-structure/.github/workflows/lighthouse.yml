@@ -29,7 +29,7 @@ jobs:
           lhci autorun || echo "Lighthouse CI завершился с ошибкой, но продолжаем"
 
       - name: Upload report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: lighthouse-report
           path: .lighthouseci
