@@ -1,0 +1,35 @@
+name: Lighthouse Audit
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout репозиторий
+        uses: actions/checkout@v3
+
+      - name: Установка Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Установка Lighthouse CI
+        run: npm install -g @lhci/cli
+
+      - name: Запуск Lighthouse
+        run: |
+          lhci autorun \
+            --collect.url=https://promelektroservice.vercel.app \
+            --upload.target=filesystem \
+            --upload.outputDir=./lhci-report
+
+      - name: Сохранение отчёта
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-report
+          path: ./lhci-report
