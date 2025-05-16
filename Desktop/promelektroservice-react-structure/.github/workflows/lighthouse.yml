@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request:
+  workflow_dispatch:
 
 jobs:
   lighthouse:
@@ -14,22 +14,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install dependencies
-        run: |
-          npm ci
-          npm install -g @lhci/cli
+        run: npm install
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli
 
       - name: Run Lighthouse CI
-        run: |
-          lhci autorun || echo "Lighthouse CI завершился с ошибкой, но продолжаем"
+        run: lhci autorun || echo "Lighthouse finished with some errors"
 
       - name: Upload report
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v4
         with:
           name: lighthouse-report
-          path: .lighthouseci
+          path: .lighthouseci/report.html
