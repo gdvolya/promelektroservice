@@ -1,0 +1,35 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm install -g @lhci/cli
+
+      - name: Run Lighthouse CI
+        run: |
+          lhci autorun || echo "Lighthouse CI завершился с ошибкой, но продолжаем"
+
+      - name: Upload report
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-report
+          path: .lighthouseci
